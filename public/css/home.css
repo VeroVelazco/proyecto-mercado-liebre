@@ -1,117 +1,158 @@
 /* header */
 
-.home__header{
+.home__header {
     background-color: var(--colorAmarillo);
-    padding-bottom: 5px;
-    
+    gap: 20px;
 }
 
-.home__header--logo{
-    width: 180px;
-    padding: 20px 10px 10px 20px;
+.home__header--header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 5px;
 }
 
-.home__header--serch-bar input{
-    width: 200px;
-    height: 25px;
-    margin: 0 10px;
-    display: block;
-    
-}
-.home__header--serch-bar button{
-    margin: 0 10px;
+.home__header--logo {
+    width: 45%;
 }
 
-.home__header--titulo{
-    font-family: 12px;
+.home__header--logo img {
+    width: 100%;
+}
+
+.home__header--serch-bar {
+    width: 50%;
+    align-items: center;
+}
+
+.home__header--serch-bar input {
+    border: solid 1px #fff;
+    width: 90%;
+    height: 35px;
+    font-size: 13px;
+    margin-right: 0;
+    position: relative;
+    border-radius: 5px 0 0 5px;
+}
+
+.home__header--serch-bar button {
+    position: absolute;
+    background: #fff;
+    border: transparent;
+    color: var(--colorGrisOscuro);
+    width: 20px;
+    border-radius: 0 5px 5px 0;
+    height: 35px;
+    margin-left: 0;
+}
+
+
+.home__header--titulo p {
+    font-size: 13px;
     text-align: center;
-    margin: 10px;
+    margin: 19px;
+    margin-bottom: 5px;
 }
 
-.home__header--nav{
-    font-family: 12px;
-    margin: 10px 0;
+.home__header--nav {
     display: none;
 }
 
-.home__header--burger-menu{
+.home__header--burger-menu {
+    width: 45px;
+    height: 45px;
     background-color: var(--colorCeleste);
-    color:#fff;
+    color: #fff;
+    font-size: 20px;
     border-radius: 5px;
     padding: 10px;
     margin: 15px 130px;
-    border: solid 1px var(--colorCeleste);
+    border: transparent;
+    
+}
+
+.home__header__banner {
+    margin: 0;
+    width: 100%;
+}
+
+.home__header__banner img {
+    width: 100%;
 }
 
 /* main */
-.home__main{
+.home__main {
     margin: 5px;
     background-color: var(--colorGrisClaro);
 }
 
-.home__main__section--titulo{
-    margin: 10px;
-    font-size: 24px;
+.home__main__section--titulo h3 {
+    margin: 15px;
+    font-size: 18px;
     color: var(--colorGrisOscuro);
 }
 
-
-.home__main__section article{
-    margin: 10px;
-    
-    
+.home__main__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
-.home__main__section--products figure{
+.home__main__section--products {
+    width: 90%;
+}
+
+.home__main__section--products img {
     width: 100%;
 }
 
-.home__main__section--products figure img{
-    width: 100%;
-}
-
-
-.home__main__section--products button {
-    width: 50px;
-    height: 50px;
+.home__main__section article i {
+    display: flex;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    border: 1px solid var(--colorVerde);
+    color: var(--colorVerde);
+    background-color: #fff;
     border-radius: 50%;
-    border: solid 2px var(--colorVerde);
-    background-color: white;
-    color:var(--colorVerde);
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.home__main__section--products figure img {
+    width: 100%;
 }
 
 .home__main__section--descrpicion {
-    border-top: solid 1px var(--colorGrisClaro);
-    padding: 15px;
+    border-top: solid 0.5px var(--colorGrisClaro);
+    padding: 10px;
     line-height: 25px;
-    font-size:16px;
     background-color: white;
-
+    position: relative;
+    width: 100%;
 }
-.home__main__section--descrpicion h4{
-    margin-top: 10px;
-    font-size: 18px;
-    color:var(--colorGrisOscuro);
+
+.home__main__section--descrpicion h4 {
     display: none;
 }
 
-
-.home__main__section--descrpicion .porcentaje{
-    color:var(--colorVerde);
+.home__main__section--descrpicion .porcentaje {
+    color: var(--colorVerde);
     font-size: 16px;
-
 }
 
-.home__header__banner img{
-    width: 100%;
-    margin: 0;
-}
+
 
 /* footer */
 .home__footer {
     text-align: center;
     padding: 40px;
     padding-bottom: 0;
+    background-color: #fff;
 }
 
 .home__footer__section div {
@@ -136,29 +177,100 @@
 .home__footer__section--copyright {
     margin-bottom: 0px;
     font-size: 10px;
-    text-align:left;
+    text-align: left;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
+
     /* home */
-    .home__header--nav{
-        display: block;
+
+    .home__header--header{
+        gap: 10px;
     }
-    .home__main__section--descrpicion h4{
-        display: block;
+    .home__header--logo {
+        width: 30%;
     }
 
-    .home__main__section article{
+    .home__header--logo img {
+        width: 240px;
+    }
+
+    .home__header--serch-bar {
+        width: 30%;
+        align-items: center;
+    }
+
+    .home__header--serch-bar input {
+        width: 80%;
+        height: 25px;
+    }
+
+    .home__header--serch-bar button {
+        height: 25px;
+    }
+
+    .home__header--titulo {
+        width: 35%;
+    }
+
+    .home__header--nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 12px;
+    }  
+
+    .home__header--nav ul{
+        display: flex;
+        gap: 10px;
+    }
+    
+    .home__header--burger-menu {
+       display: none;
+    }
+    
+    /* main */
+
+    .home__main__section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .home__main__section--products {
+        width: 40%;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
-    .home__header--burger-menu{
-        display: none;
+    .home__main__section--titulo h3 {
+        margin: 20px  60px;
+        font-size: 24px;
+    }
+    
+    .home__main__section--descrpicion p{
+        display: inline-flex;
+        
     }
 
-   
+    .home__main__section--descrpicion .porcentaje{
+        display: inline-flex;
+        
+    }
+
+    .home__main__section--descrpicion h4 {
+        display: flex;
+        color: var(--colorGrisOscuro);
+    }
+ 
 }
 
 
+@media(min-width: 1024px) {
+    .home__main__section--products {
+        width: 20%;
+    }
 
 
+}
